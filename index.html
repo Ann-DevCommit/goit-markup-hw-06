@@ -408,8 +408,24 @@
 
                 </div>
                 <div class="subscribe">
-                    <h3 class="footer-connect">Подпишитесь на рассылку</h3>
 
+                    <form>
+                        <label class="footer-connect" for="subscribe-email-input">Подпишитесь на рассылку</label>
+                        <span class="subscribe-form-interaction">
+                            <input class="subscribe-input" type="email" name="subscribe-user-email" placeholder="E-mail"
+                                required id="subscribe-email-input">
+                            <button type="submit" class="button subscribe-button" aria-label="Подписаться">
+                                <span class="subscribe-button-title">
+                                    Подписаться
+                                </span>
+
+                                <svg class="icon" width=24 height=24>
+                                    <use href="./images/icons.svg#icon-send"></use>
+                                </svg>
+
+                            </button>
+                        </span>
+                    </form>
                 </div>
             </div>
         </div>
@@ -419,12 +435,64 @@
     <!-- Modal -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <p></p>
-            <button class="button modal-close" aria-label="Закрыть" data-modal-close>
+
+            <button type="button" class="button modal-close" aria-label="Закрыть" data-modal-close>
                 <svg class="icon" width=11 height=11>
                     <use href="./images/icons.svg#icon-close"></use>
                 </svg>
             </button>
+            <form class="modal-form" autocomplete="off">
+                <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+                <label class="form-field">
+                    <span class="input-title">Имя</span>
+                    <span class="form-input-box">
+                        <input class="form-input" type="text" name="user-name">
+                        <svg class="icon" width=12 height=12>
+                            <use href="./images/icons.svg#icon-modal-name"></use>
+                        </svg>
+                    </span>
+                </label>
+                <label class="form-field">
+                    <span class="input-title">Телефон*</span>
+                    <span class="form-input-box">
+                        <input class="form-input" type="tel" name="user-tel" required placeholder=" " minlength="10"
+                            pattern="[0-9+-]{10,}">
+                        <svg class="icon" width=12 height=12>
+                            <use href="./images/icons.svg#icon-modal-tel"></use>
+                        </svg>
+                    </span>
+                </label>
+                <label class="form-field">
+                    <span class="input-title">Почта</span>
+                    <span class="form-input-box">
+                        <input class="form-input" type="email" name="user-email" autocomplete="on">
+                        <svg class="icon" width=12 height=12>
+                            <use href="./images/icons.svg#icon-modal-email"></use>
+                        </svg>
+                    </span>
+                </label>
+                <label class="form-field textarea">
+                    <span class="input-title">Комментарий</span>
+                    <textarea class="textarea-input" placeholder="Введите текст" name="user-comment"></textarea>
+
+                </label>
+                <label class="form-field agreements-checkbox">
+
+                    <input class="form-checkbox visually-hidden" type="checkbox" name="user-agreement" required>
+
+                    <svg class="icon checkbox-pointer" width=11 height=8>
+                        <use href="./images/icons.svg#icon-modal-check-pointer"></use>
+                    </svg>
+
+                    <span class="checkbox-title">Соглашаюсь с рассылкой и принимаю <a href="#"
+                            class="agreements">Условия
+                            договора</a></span>
+
+
+                </label>
+
+                <button type="submit" class="button modal-form-batton" aria-label="Отправить">Отправить</button>
+            </form>
         </div>
     </div>
 
